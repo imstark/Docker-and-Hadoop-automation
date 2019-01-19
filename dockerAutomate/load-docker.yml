@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+  - copy:
+     src: "/root/software/centos-latest.tar"
+     dest: "/root/doc-images/"
+  - copy:
+     src: "/root/software/ubuntu-latest.tar"
+     dest: "/root/doc-images/"
+  - command: docker load -i /root/doc-images/centos-latest.tar
+  - command: docker load -i /root/doc-images/ubuntu-latest.tar

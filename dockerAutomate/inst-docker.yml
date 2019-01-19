@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+  - package:
+     name: "docker-ce"
+     state: present
+  - service:
+     name: "docker.service"
+     state: started
+     enabled: true
